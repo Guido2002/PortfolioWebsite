@@ -29,6 +29,7 @@
     font-size: 2rem;
     width: 40vw;
     height: 20vw;
+    position: relative;
 }
 
 h1 {
@@ -51,7 +52,11 @@ p {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+}
+
 @font-face {
     font-family: 'CRTFont';
-    src: url(DEADCRT.ttf);
+    src: url(/Assets/DEADCRT.ttf);
 }
