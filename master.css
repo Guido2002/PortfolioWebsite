@@ -25,31 +25,40 @@
 #content {
     font-family: VT323;
     padding: 10rem;
+    gap: 2rem;
     color: aliceblue;
     font-size: 2rem;
-    width: 40vw;
-    height: 20vw;
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
 h1 {
-    padding: 5rem;
     align-self: center;
 }
 
 p {
     font-size: 1.3rem;
-    padding: 1rem 1rem 1rem 2rem;
     align-self: center;
+    width: auto;
+}
+
+h2 {
+    
 }
 
 .btn_start_menu {
     color: rgb(30, 255, 0);
     background-color: rgb(0, 0, 0);
-    width: 5vw;
+    width: 10vw;
     height: 5vh;
     border-radius: 1rem 0.5rem 1rem 0.5rem;
     cursor: pointer;
+}
+
+#info_icon {
+    width: 2rem;
+    border-radius: 2rem;
 }
 
 a {
