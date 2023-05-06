@@ -1,71 +1,107 @@
-* {
-    margin: 0 auto;
-    box-sizing: border-box;
-    color: rgb(0, 255, 0);
-}
+/* Set default styles for the page */
 
-#screen {
-  background-color: rgb(5, 75, 5);
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  height: 100vh;
-  position: relative;
-}
-
-#scan {
-    position: absolute;
-    width: 100%;
+html {
+    font-size: 16px;
     height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.5;
-}
-
-#content {
-    font-family: VT323;
-    padding: 10rem;
-    gap: 2rem;
-    color: aliceblue;
-    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    position: relative;
-}
+  }
 
-h1 {
-    align-self: center;
-}
-
-p {
-    font-size: 1.3rem;
-    align-self: center;
-    width: auto;
-}
-
-h2 {
-    
-}
-
-.btn_start_menu {
-    color: rgb(30, 255, 0);
-    background-color: rgb(0, 0, 0);
-    width: 10vw;
-    height: 5vh;
-    border-radius: 1rem 0.5rem 1rem 0.5rem;
-    cursor: pointer;
-}
-
-#info_icon {
-    width: 2rem;
-    border-radius: 2rem;
-}
-
-a {
+  main {
+    flex: 1 0 auto;
+  }
+  
+  /* Style the header */
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    margin: 0;
+  }
+  
+  /* Style the navigation menu */
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
-}
+    color: #333;
+  }
+  
+  nav a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Style the main content section */
+  
+  section {
+    padding: 20px;
+  }
+  
+  article {
+    margin-bottom: 30px;
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+  
+  article h1 {
+    font-size: 28px;
+  }
+  
+  /* Style the aside section */
+  
+  aside {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  aside h1 {
+    margin-top: 0;
+  }
+  
+  /* Style the footer */
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
 
-@font-face {
-    font-family: 'CRTFont';
-    src: url(/Assets/DEADCRT.ttf);
-}
+  
