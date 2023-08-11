@@ -37,12 +37,83 @@ html {
   
   /* Style the navigation menu */
   
+  .fullscreen-bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fullscreen-bg__image {
+    background-image: url('Homepagina.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  animation: fadein 3s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@keyframes fadein {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
   nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    background: #00d0ff9a
+    background: #00d0ff9a;
+  }
+
+  iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: 1rem;
+  }
+  
+  figure {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 420px;
+    margin: 20px;
+    padding: 16px;
+    background-color: #f9f9f9;
+  }
+
+  .cardlist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
   }
   
   nav li {
@@ -72,8 +143,8 @@ html {
   
   article {
     margin-bottom: 30px;
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     box-shadow: 0 0 12.5px 5px #f8f8f884;
