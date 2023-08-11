@@ -12,11 +12,7 @@ html {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #00d0ff, #FFFFFF);
-  }
-
-  main {
-    flex: 1 0 auto;
+    background: white;
   }
   
   /* Style the header */
@@ -25,9 +21,13 @@ html {
     background-color: #00d0ff;
     color: #fff;
     text-align: center;
-    padding: 20px;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 0;
+  }
+
+  #title {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
   }
   
   h1, h2, h3, p {
@@ -42,7 +42,7 @@ html {
     list-style: none;
     margin: 0;
     padding: 0;
-    background:linear-gradient(to top left, #00d0ff9a, #FFFFFF);
+    background: #00d0ff9a
   }
   
   nav li {
@@ -65,14 +65,20 @@ html {
   section {
     padding: 20px;
   }
+
+  #main {
+    padding-top: 0rem;
+  }
   
   article {
     margin-bottom: 30px;
     padding-left: 7rem;
     padding-right: 7rem;
-    box-shadow: 0 0 50px 20px #f8f8f884;
-    border-radius: 1rem 1rem;
-    background:linear-gradient(to top left, #00d0ff9a, #163db443);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: 0 0 12.5px 5px #f8f8f884;
+    border-radius: 0.4rem 0.4rem;
+    background:linear-gradient(to top left, #00d0ff9a, #16b4a943);
   }
   
   footer {
@@ -82,6 +88,7 @@ html {
     padding: 2rem;
     font-size: 1rem;
     flex-shrink: 0;
+    margin-top: auto;
   }
   
   footer a {
