@@ -27,6 +27,34 @@ html {
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
 }
+
+/* Button styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.portfolio {
+  max-height: 50vh;
+}
+
+/* Hover animation */
+.button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.button > a {
+  text-decoration: none;
+  text-decoration-color: #ffffff;
+}
   
   /* Style the header */
   
@@ -93,6 +121,24 @@ html {
   bottom: 0;
   z-index: 1;
   padding-bottom: 0.5rem;
+  animation: floatingAnimation 3s ease infinite;
+}
+
+/* Keyframe animation for floating */
+@keyframes floatingAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.arrow-button:hover {
+  cursor: pointer;
+}
+
+.arrow-button::content {
 
 }
 
@@ -128,15 +174,30 @@ html {
     background: #00d0ff9a;
   }
 
+  /* Flex container styles */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align the flex container at the bottom */
+  height: 100vh; /* Adjust the height of the parent container */
+}
+
+/* Image styles */
+.flex-container img {
+  max-width: 50%; /* Adjust this value to make the image smaller */
+  height: auto;
+}
+
   iframe {
     aspect-ratio: 16/9;
     width: 100%;
     border-radius: 1rem;
+    max-height: 100vh;
   }
   
   figure {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .card {
