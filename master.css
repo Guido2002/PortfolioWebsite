@@ -8,7 +8,7 @@ html {
   }
   
 body {
-    font-family: "Roboto";
+    font-family: "Bricolage Grotesque", sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -22,18 +22,22 @@ html {
 
 h1 {
   font-size: 2rem;
+  color: var(--tint-100);
 }
 
 h2 {
   font-size: 1.6rem;
+  color: var(--tint-90);
 }
 
 h3 {
  font-size: 1.4rem;
+ color: var(--tint-80);
 }
 
 p {
   font-size: 1.2rem;
+  color: var(--tint-70);
 }
 
 :root {
@@ -57,7 +61,7 @@ body {
 
 /* Text color using a 90% tint (light gray) */
 p {
-  color: var(--tint-90);
+  color: var(--tint-80);
 }
 
 /* Border color using a 20% tint (dark gray) */
@@ -119,7 +123,6 @@ p {
   
   h1, h2, h3, p {
     margin: 0;
-    color: white;
   }
   
   /* Style the navigation menu */
@@ -142,7 +145,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity as needed */
+  background-color: rgba(0, 0, 0, 0.52); /* Adjust the opacity as needed */
 }
 
 
@@ -156,6 +159,8 @@ p {
     right: 0;
     bottom: 0;
     z-index: -1;
+    filter: opacity(0.7);
+    filter: blur(0.8);
 }
 
 #portfolio-pagina {
