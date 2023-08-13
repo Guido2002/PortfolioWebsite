@@ -138,10 +138,6 @@ html {
   cursor: pointer;
 }
 
-.arrow-button::content {
-
-}
-
 .content {
   position: relative;
   z-index: 1;
@@ -320,5 +316,62 @@ html {
   width: 100%;
   transition: transform 0.5s ease-in-out, opacity 0.5s; /* Add smooth transition for zoom effect */
 }
+
+/* Responsiviteit
+/* Add these CSS rules at the end of your existing styles (master.css) */
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust font size for smaller screens */
+  html {
+    font-size: 14px;
+  }
+  
+  /* Center align content on smaller screens */
+  .content {
+    text-align: center;
+  }
+
+  /* Make the arrow button smaller on smaller screens */
+  .arrow-button {
+    padding-bottom: 0.3rem;
+  }
+
+  /* Adjust padding for cards on smaller screens */
+  .card {
+    padding: 10px;
+  }
+
+  /* Adjust grid layout for cards on smaller screens */
+  .cardlist {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 1200px) {
+  /* Adjust font size for larger screens */
+  html {
+    font-size: 18px;
+  }
+
+  /* Make the arrow button larger on larger screens */
+  .arrow-button {
+    padding-bottom: 0.7rem;
+  }
+
+  /* Adjust padding for cards on larger screens */
+  .card {
+    padding: 20px;
+  }
+
+  /* Adjust grid layout for cards on larger screens */
+  .cardlist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Additional responsive adjustments can be added based on your design needs */
+
 
   
