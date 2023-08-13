@@ -7,18 +7,64 @@ html {
     padding: 0;
   }
   
-  body {
+body {
     font-family: "Roboto";
     margin: 0;
     display: flex;
     flex-direction: column;
     background: white;
-  }
+}
 
-  html {
+html {
     overflow: scroll;
     overflow-x: hidden;
 }
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+ font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+:root {
+  --tint-10: #1a1a1a;  /* 10% tint */
+  --tint-20: #333333;  /* 20% tint */
+  --tint-30: #4d4d4d;  /* 30% tint */
+  --tint-40: #666666;  /* 40% tint */
+  --tint-50: #808080;  /* 50% tint */
+  --tint-60: #999999;  /* 60% tint */
+  --tint-70: #b3b3b3;  /* 70% tint */
+  --tint-80: #cccccc;  /* 80% tint */
+  --tint-90: #e5e5e5;  /* 90% tint */
+  --tint-100: #f5f5f5; /* 100% tint (Near white) */
+}
+
+/* Example usage: */
+/* Background color using a 50% tint (gray) */
+body {
+  background-color: var(--tint-20);
+}
+
+/* Text color using a 90% tint (light gray) */
+p {
+  color: var(--tint-90);
+}
+
+/* Border color using a 20% tint (dark gray) */
+.card {
+  border: 1px solid var(--tint-20);
+}
+
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
@@ -32,7 +78,7 @@ html {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #3498db;
+  background-color: var(--tint-10);
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -47,7 +93,7 @@ html {
 
 /* Hover animation */
 .button:hover {
-  background-color: #2980b9;
+  background-color: var(--tint-40);
   transform: scale(1.05);
 }
 
@@ -59,8 +105,8 @@ html {
   /* Style the header */
   
   header {
-    background-color: #00d0ff;
-    color: #fff;
+    background-color: var(--tint-30);
+    color: var(--tint-90);
     text-align: center;
     padding: 1rem 1rem 1rem 1rem;
     margin: 0;
@@ -86,7 +132,7 @@ html {
     display: flex;
     z-index: -1;
     justify-content: center;
-    background-color: #003440;
+    background-color: var(--tint-20);
 }
 
 .fullscreen-bg__filter::before {
@@ -167,7 +213,7 @@ html {
     list-style: none;
     margin: 0;
     padding: 0;
-    background: #00d0ff9a;
+    background: var(--tint-20);
   }
 
   /* Flex container styles */
@@ -243,13 +289,12 @@ html {
     padding-right: 3rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    box-shadow: 0 0 12.5px 5px #f8f8f884;
     border-radius: 0.4rem 0.4rem;
-    background:linear-gradient(to top left, #00d0ff9a, #16b4a943);
+    background: var(--tint-40);
   }
   
   footer {
-    background-color: #00d0ff;
+    background-color: var(--tint-30);
     color: #fff;
     text-align: center;
     padding: 2rem;
@@ -260,6 +305,7 @@ html {
   
   footer a {
     color: #fff;
+    font-weight: bold;
     text-decoration: none;
   }
   
@@ -316,6 +362,39 @@ html {
   width: 100%;
   transition: transform 0.5s ease-in-out, opacity 0.5s; /* Add smooth transition for zoom effect */
 }
+
+/* Add fade-in and scale-up animation to cards on hover */
+.card {
+  opacity: 0;
+  background: var(--tint-30);
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Keyframes for card fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the cards with a slight delay */
+.card:nth-child(odd) {
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+.card:nth-child(even) {
+  animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
 
 /* Responsiviteit
 /* Add these CSS rules at the end of your existing styles (master.css) */
