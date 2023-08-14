@@ -313,6 +313,9 @@ p {
     font-size: 1rem;
     flex-shrink: 0;
     margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   footer a {
@@ -407,6 +410,19 @@ p {
   animation: fadeIn 1s ease-in-out 1s forwards;
 }
 
+.linkedin-icon a img {
+  display: flex;
+  width: 40px; /* Set the desired width for the icon */
+  height: 40px; /* Set the desired height for the icon */
+  transition: transform 0.3s ease-in-out;
+  padding-left: 10px;
+}
+
+.linkedin-icon a:hover {
+  transform: scale(1.2); /* Increase the size of the icon on hover */
+}
+
+
 
 /* Responsiviteit
 /* Add these CSS rules at the end of your existing styles (master.css) */
@@ -434,12 +450,23 @@ p {
     margin: 5px;
   }
 
+  .fullscreen-bg {
+    height: 40vh;
+  }
+
   /* Adjust grid layout for cards on smaller screens */
   .cardlist {
     grid-template-columns: repeat(1, 1fr);
     padding: 5px;
     gap: 10px;
   }
+}
+
+@media (max-width: 1100px) { 
+  .fullscreen-bg {
+    height: 50vh;
+  }
+
 }
 
 /* Responsive styles for larger screens */
