@@ -106,12 +106,6 @@ p {
   max-height: 50vh;
 }
 
-/* Hover animation */
-.button:hover {
-  background-color: var(--tint-40);
-  transform: scale(1.05);
-}
-
 .button > a {
   text-decoration: none;
   text-decoration-color: #ffffff;
@@ -250,7 +244,7 @@ p {
     aspect-ratio: 16/9;
     width: 100%;
     border-radius: 1rem;
-    max-height: 100vh;
+    max-height: 40vh;
   }
   
   figure {
@@ -393,11 +387,6 @@ p {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.card:hover {
-  opacity: 1;
-  transform: scale(1);
-}
-
 /* Keyframes for card fade-in animation */
 @keyframes fadeIn {
   from {
@@ -507,7 +496,7 @@ p {
   .cardlist {
     grid-template-columns: repeat(1, 1fr);
     padding: 3px;
-    gap: 5px;
+    gap: 2px;
     align-items: center;
   }
 }
@@ -533,10 +522,22 @@ p {
     z-index: 5;
   }
 
+  article {
+    margin-bottom: 30px;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0.4rem 0.4rem;
+    background: var(--tint-40);
+  }
+
   /* Adjust padding for cards on small screens */
   .card {
     padding: 20px;
-    margin: 10px;
+    margin: 0px;
+    width: 95vw;
+    align-self: center;
     height: fit-content;
   }
 
@@ -549,7 +550,7 @@ p {
   .cardlist {
     grid-template-columns: repeat(1, 1fr);
     padding: 5px;
-    gap: 4px;
+    gap: 0px;
   }
 }
 
