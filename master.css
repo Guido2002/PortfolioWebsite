@@ -43,6 +43,7 @@ h3 {
 p {
   font-size: 1.2rem;
   color: var(--tint-70);
+  padding-top: 0.5rem;
 }
 
 :root {
@@ -72,6 +73,11 @@ p {
 /* Border color using a 20% tint (dark gray) */
 .card {
   border: 1px solid var(--tint-20);
+  height: fit-content;
+}
+
+.card > p {
+  flex-direction: row;
 }
 
 ::-webkit-scrollbar {
@@ -255,17 +261,18 @@ p {
   .card {
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 420px;
-    margin: 20px;
+    max-width: 820px;
+    margin: 5px;
     padding: 16px;
     background-color: #f9f9f9;
+    flex-shrink: 2;
   }
 
   .cardlist {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
   
   nav li {
@@ -401,7 +408,6 @@ p {
   }
 }
 
-/* Apply the fade-in animation to the cards with a slight delay */
 .card:nth-child(odd) {
   animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
@@ -412,8 +418,8 @@ p {
 
 .linkedin-icon a img {
   display: flex;
-  width: 40px; /* Set the desired width for the icon */
-  height: 40px; /* Set the desired height for the icon */
+  width: 40px;
+  height: 40px;
   transition: transform 0.3s ease-in-out;
   padding-left: 10px;
 }
@@ -429,7 +435,7 @@ p {
 @media screen and (max-width: 480px) {
   /* Adjust font size for extra-small screens */
   html {
-    font-size: 12px;
+    font-size: 10px;
   }
 
  .content h1 {
@@ -465,6 +471,7 @@ p {
   .card p {
     text-align: center;
     font-size: 1.5rem;
+    padding: 20rem;
   }
 
   /* Adjust fullscreen background height */
@@ -485,7 +492,7 @@ p {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   /* Adjust font size for small screens */
   html {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   /* Make the arrow button smaller */
@@ -496,8 +503,9 @@ p {
 
   /* Adjust padding for cards on small screens */
   .card {
-    padding: 10px;
-    margin: 5px;
+    padding: 30px;
+    margin: 10px;
+    height: fit-content;
   }
 
   /* Adjust fullscreen background height */
@@ -509,7 +517,7 @@ p {
   .cardlist {
     grid-template-columns: repeat(1, 1fr);
     padding: 5px;
-    gap: 10px;
+    gap: 4px;
   }
 }
 
