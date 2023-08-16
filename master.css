@@ -80,6 +80,29 @@ p {
   flex-direction: row;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.progress-container {
+  background-color: transparent;
+  height: 10px;
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: #169873;
+  height: 10px;
+  width: 0%;
+}
+
+.content {
+  padding: 2em;
+}
+
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
@@ -114,7 +137,7 @@ p {
   /* Style the header */
   
   header {
-    background-color: var(--tint-30);
+    background-color: #169873;
     color: var(--tint-90);
     text-align: center;
     padding: 1rem 1rem 1rem 1rem;
@@ -307,7 +330,7 @@ p {
   }
   
   footer {
-    background-color: var(--tint-30);
+    background-color: #169873;
     color: #fff;
     text-align: center;
     padding: 2rem;

@@ -1,6 +1,6 @@
 function scrollToFooter() {
-    const footer = document.getElementById('page');
-    footer.scrollIntoView({ behavior: 'smooth' });
+    const page = document.getElementById('page');
+    page.scrollIntoView({ behavior: 'smooth' });
 }
 
 // JavaScript (master.js)
@@ -56,6 +56,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // Change the background image every 3 seconds
     setInterval(updateBackgroundImage, 5000);
 });
+
+function progressBarScroll() {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+        height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+        scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  }
+  
+  window.onscroll = function () {
+    progressBarScroll();
+  };
 
 
 
