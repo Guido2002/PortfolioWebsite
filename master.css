@@ -438,6 +438,20 @@ p {
     font-size: 10px;
   }
 
+  header > h1 {
+    font-size: 4rem;
+    padding: 0;
+  }
+
+  #title {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+
+  #page {
+    padding-top: 0px;
+  }
+
  .content h1 {
     font-size: 5rem;
   }
@@ -453,9 +467,20 @@ p {
 
   /* Adjust padding for cards on extra-small screens */
   .card {
-    padding: 8px;
-    margin: 3px;
-    height: 15vh;
+    padding: 20px;
+    margin: 10px;
+    width: 80vw;
+    height: fit-content;
+  }
+
+  .card {
+    opacity: none;
+    transform: none;
+    transition: none;
+  }
+
+  #main {
+    background:none;
   }
 
   .card h2 {
@@ -465,13 +490,12 @@ p {
 
   .card h3 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .card p {
     text-align: center;
-    font-size: 1.5rem;
-    padding: 20rem;
+    font-size: 2rem;
   }
 
   /* Adjust fullscreen background height */
@@ -495,6 +519,14 @@ p {
     font-size: 18px;
   }
 
+  #main {
+    background: none;
+  }
+
+  #page {
+    padding-top: 0px;
+  }
+
   /* Make the arrow button smaller */
   .arrow-button {
     padding-bottom: 3rem;
@@ -503,7 +535,7 @@ p {
 
   /* Adjust padding for cards on small screens */
   .card {
-    padding: 30px;
+    padding: 20px;
     margin: 10px;
     height: fit-content;
   }
