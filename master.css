@@ -491,6 +491,7 @@ p {
   /* Make the arrow button smaller */
   .arrow-button {
     padding-bottom: 3rem;
+    z-index: 5;
   }
 
   /* Adjust padding for cards on small screens */
@@ -521,6 +522,7 @@ p {
 
   .arrow-button {
     padding-bottom: 3rem;
+    z-index: 5;
   }
 
   /* Adjust fullscreen background height */
@@ -539,6 +541,7 @@ p {
   /* Make the arrow button larger */
   .arrow-button {
     padding-bottom: 0.7rem;
+    z-index: 5;
   }
 
   /* Adjust padding for cards on larger screens */
@@ -567,6 +570,7 @@ p {
   /* Make the arrow button even larger */
   .arrow-button {
     padding-bottom: 0.9rem;
+    z-index: 5;
   }
 
   /* Adjust fullscreen background height */
