@@ -442,7 +442,7 @@ p {
 
   /* Make the arrow button even smaller */
   .arrow-button {
-    padding-bottom: 0.2rem;
+    padding-bottom: 7rem;
   }
 
   /* Adjust padding for cards on extra-small screens */
@@ -490,7 +490,7 @@ p {
 
   /* Make the arrow button smaller */
   .arrow-button {
-    padding-bottom: 0.3rem;
+    padding-bottom: 3rem;
   }
 
   /* Adjust padding for cards on small screens */
@@ -517,6 +517,10 @@ p {
   /* Adjust font size for medium-sized screens */
   html {
     font-size: 16px;
+  }
+
+  .arrow-button {
+    padding-bottom: 3rem;
   }
 
   /* Adjust fullscreen background height */
