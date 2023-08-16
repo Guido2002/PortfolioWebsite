@@ -425,36 +425,86 @@ p {
 
 
 /* Responsiviteit
-/* Add these CSS rules at the end of your existing styles (master.css) */
-
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
-  /* Adjust font size for smaller screens */
+/* Responsive styles for extra-small screens */
+@media (max-width: 480px) {
+  /* Adjust font size for extra-small screens */
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
-  
-  /* Center align content on smaller screens */
-  .content {
+
+ .content h1 {
+    font-size: 5rem;
+  }
+
+  .content p {
+    font-size: 1.5rem
+  }
+
+  /* Make the arrow button even smaller */
+  .arrow-button {
+    padding-bottom: 0.2rem;
+  }
+
+  /* Adjust padding for cards on extra-small screens */
+  .card {
+    padding: 8px;
+    margin: 3px;
+    height: 15vh;
+  }
+
+  .card h2 {
+    font-size: 2.5rem;
     text-align: center;
   }
 
-  /* Make the arrow button smaller on smaller screens */
+  .card h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .card p {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* Adjust fullscreen background height */
+  .fullscreen-bg {
+    height: 100vh;
+  }
+
+  /* Adjust grid layout for cards on extra-small screens */
+  .cardlist {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3px;
+    gap: 5px;
+    align-items: center;
+  }
+}
+
+/* Responsive styles for small screens */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Adjust font size for small screens */
+  html {
+    font-size: 14px;
+  }
+
+  /* Make the arrow button smaller */
   .arrow-button {
     padding-bottom: 0.3rem;
   }
 
-  /* Adjust padding for cards on smaller screens */
+  /* Adjust padding for cards on small screens */
   .card {
     padding: 10px;
     margin: 5px;
   }
 
+  /* Adjust fullscreen background height */
   .fullscreen-bg {
-    height: 40vh;
+    height: 100vh;
   }
 
-  /* Adjust grid layout for cards on smaller screens */
+  /* Adjust grid layout for cards on small screens */
   .cardlist {
     grid-template-columns: repeat(1, 1fr);
     padding: 5px;
@@ -462,21 +512,27 @@ p {
   }
 }
 
-@media (max-width: 1100px) { 
-  .fullscreen-bg {
-    height: 50vh;
+/* Responsive styles for medium-sized screens */
+@media (min-width: 769px) and (max-width: 1100px) {
+  /* Adjust font size for medium-sized screens */
+  html {
+    font-size: 16px;
   }
 
+  /* Adjust fullscreen background height */
+  .fullscreen-bg {
+    height: 100vh;
+  }
 }
 
 /* Responsive styles for larger screens */
-@media (min-width: 1200px) {
+@media (min-width: 1101px) and (max-width: 1440px) {
   /* Adjust font size for larger screens */
   html {
     font-size: 18px;
   }
 
-  /* Make the arrow button larger on larger screens */
+  /* Make the arrow button larger */
   .arrow-button {
     padding-bottom: 0.7rem;
   }
@@ -486,13 +542,36 @@ p {
     padding: 20px;
   }
 
+  /* Adjust fullscreen background height */
+  .fullscreen-bg {
+    height: 100vh;
+  }
+
   /* Adjust grid layout for cards on larger screens */
   .cardlist {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Additional responsive adjustments can be added based on your design needs */
+/* Responsive styles for extra-large screens */
+@media (min-width: 1441px) {
+  /* Adjust font size for extra-large screens */
+  html {
+    font-size: 20px;
+  }
 
+  /* Make the arrow button even larger */
+  .arrow-button {
+    padding-bottom: 0.9rem;
+  }
 
-  
+  /* Adjust fullscreen background height */
+  .fullscreen-bg {
+    height: 100vh;
+  }
+
+  /* Adjust grid layout for cards on extra-large screens */
+  .cardlist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
