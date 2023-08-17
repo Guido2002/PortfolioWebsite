@@ -154,16 +154,19 @@ p {
   }
 
   .subtitle {
-      background-color: #169873b5;
+      background-color: #169873;
       color: var(--tint-90);
       text-align: center;
       padding: 1rem 1rem 1rem 1rem;
       margin-top: 50px;
       border-radius: 0.5rem;
+      z-index: 4;
+      position: relative;
   }
 
   .subtitle h1 {
     font-weight: 600;
+    z-index: 4;
   }
   
   /* Style the navigation menu */
@@ -174,19 +177,20 @@ p {
     height: 100vh;
     overflow: hidden;
     display: flex;
-    z-index: -1;
+    z-index: 3;
     justify-content: center;
-    background-color: var(--tint-20);
+    background-color: #169873d2;
 }
 
-.fullscreen-bg__filter::before {
-  content: '';
+model-viewer {
+  display: flex;
+  align-self: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.52); /* Adjust the opacity as needed */
+  height:100%;
+	width:100%;
+  margin: 0 auto;
+  z-index: 3;
+  filter: opacity(0.2);
 }
 
 
@@ -290,6 +294,7 @@ p {
     width: 100%;
     border-radius: 1rem;
     max-height: 40vh;
+    filter: grayscale(0.1);
   }
   
   figure {
@@ -617,6 +622,10 @@ p {
     padding: 0;
   }
 
+  .subtitle h1 {
+    font-size: 3rem;
+  }
+
   #title {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
@@ -707,6 +716,14 @@ p {
     z-index: 5;
   }
 
+  .content h1 {
+    font-size: 2.3rem;
+  }
+
+  .content p {
+    font-size: 1rem
+  }
+
   article {
     margin-bottom: 30px;
     padding-left: 0rem;
@@ -748,7 +765,16 @@ p {
 
   .arrow-button {
     padding-bottom: 3rem;
+    font-size: 1.5rem;
     z-index: 5;
+  }
+
+  .content h1 {
+    font-size: 3.5rem;
+  }
+
+  .content p {
+    font-size: 1.6rem
   }
 
   /* Adjust fullscreen background height */
@@ -767,6 +793,7 @@ p {
   /* Make the arrow button larger */
   .arrow-button {
     padding-bottom: 0.7rem;
+    font-size: 1.5rem;
     z-index: 5;
   }
 
