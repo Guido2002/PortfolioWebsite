@@ -32,7 +32,7 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
-  color: var(--tint-90);
+  color: #11cd98;
 }
 
 h3 {
@@ -210,10 +210,19 @@ p {
 
 .arrow-button {
   position: absolute;
-  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  color: white;
   z-index: 2;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
   animation: floatingAnimation 3s ease infinite;
+}
+
+.arrow-button img {
+  filter: brightness(0) invert(1);
+  background:transparent;
+  padding-bottom: 1.5rem;
 }
 
 /* Keyframe animation for floating */
@@ -265,8 +274,8 @@ p {
   /* Flex container styles */
 .flex-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-end; /* Align the flex container at the bottom */
+  justify-content: end;
+  align-items: center; /* Align the flex container at the bottom */
   height: 100vh; /* Adjust the height of the parent container */
 }
 
