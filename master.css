@@ -406,26 +406,6 @@ p {
 .card {
   opacity: 0;
   background: var(--tint-30);
-  transform: scale(0.9);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-/* Keyframes for card fade-in animation */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-.card:nth-child(odd) {
-  animation: fadeIn 1s ease-in-out 0.5s forwards;
-}
-
-.card:nth-child(even) {
-  animation: fadeIn 1s ease-in-out 1s forwards;
 }
 
 .linkedin-icon a img {
@@ -529,6 +509,34 @@ p {
   animation-duration:10s;
   animation-delay:4s;
 }
+
+.animatable {
+  visibility: hidden;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.animated {
+  visibility: visible;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(100px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
 @keyframes rise{
   0%{
     bottom:-100px;
@@ -543,13 +551,7 @@ p {
   }
 }
 
-
-
-
-
-
-
-
+/*========================================================================================================================================================/
 /* Responsiviteit
 /* Responsive styles for extra-small screens */
 @media screen and (max-width: 480px) {
