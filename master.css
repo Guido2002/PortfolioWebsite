@@ -646,6 +646,8 @@ model-viewer {
   /* Make the arrow button even smaller */
   .arrow-button {
     padding-bottom: 7rem;
+    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   /* Adjust padding for cards on extra-small screens */
@@ -713,6 +715,7 @@ model-viewer {
   /* Make the arrow button smaller */
   .arrow-button {
     padding-bottom: 3rem;
+    font-size: 1.5rem;
     z-index: 5;
   }
 
