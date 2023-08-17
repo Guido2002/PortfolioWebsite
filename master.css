@@ -152,6 +152,19 @@ p {
   h1, h2, h3, p {
     margin: 0;
   }
+
+  .subtitle {
+      background-color: #169873b5;
+      color: var(--tint-90);
+      text-align: center;
+      padding: 1rem 1rem 1rem 1rem;
+      margin-top: 50px;
+      border-radius: 0.5rem;
+  }
+
+  .subtitle h1 {
+    font-weight: 600;
+  }
   
   /* Style the navigation menu */
   
@@ -416,6 +429,36 @@ p {
   padding-left: 10px;
 }
 
+.list-icons {
+  padding-top: 10px;
+  place-items: start;
+  display: flex;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.icon {
+  color: #fff;
+  font-size: 1rem;
+  flex-flow: row wrap;
+  padding-top: 5px;
+  margin-top: auto;
+  text-align: start;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+  padding-left: 10px;
+  display: flex;
+}
+
 .linkedin-icon a:hover {
   transform: scale(1.2); /* Increase the size of the icon on hover */
 }
@@ -668,8 +711,8 @@ p {
   /* Adjust padding for cards on small screens */
   .card {
     padding: 20px;
-    margin: 0px;
-    width: 95vw;
+    margin: 20px;
+    width: 90vw;
     align-self: center;
     height: fit-content;
   }
