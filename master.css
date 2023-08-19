@@ -17,6 +17,8 @@ body {
 
 #page {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   align-items: center;
 }
 
@@ -50,7 +52,7 @@ p {
   --tint-10: #1a1a1a;  /* 10% tint */
   --tint-20: #333333;  /* 20% tint */
   --tint-30: #4d4d4d;  /* 30% tint */
-  --tint-40: #666666;  /* 40% tint */
+  --tint-40: #6666667c;  /* 40% tint */
   --tint-50: #808080;  /* 50% tint */
   --tint-60: #999999;  /* 60% tint */
   --tint-70: #b3b3b3;  /* 70% tint */
@@ -75,6 +77,7 @@ p {
   border: 1px solid var(--tint-20);
   height: fit-content;
 }
+
 
 .card > p {
   flex-direction: row;
@@ -305,11 +308,19 @@ model-viewer {
   .card {
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(60px);
     max-width: 820px;
     margin: 5px;
     padding: 16px;
-    background-color: #f9f9f9;
     flex-shrink: 2;
+    background: radial-gradient(
+		circle at top right,
+		rgba(25, 83, 115, 0.7) 0,
+		rgba(25, 83, 115, 0.5) 100%
+	  );
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .cardlist {
@@ -354,6 +365,43 @@ model-viewer {
     padding-bottom: 2rem;
     border-radius: 0.4rem 0.4rem;
     background: var(--tint-40);
+  }
+  
+  @keyframes Sub {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70% {
+      transform: translateY(-8px);
+    }
+  
+    20%,
+    40%,
+    60% {
+      transform: translateY(8px);
+    }
+  
+    80% {
+      transform: translateY(6.4px);
+    }
+  
+    90% {
+      transform: translateY(-6.4px);
+    }
+  }
+
+  .shape {
+    z-index: -7;
+    display: flex;
+    position: absolute;
+    justify-self: center;
+    width: 70%;
+    height: 60%;
   }
   
   footer {
@@ -477,6 +525,7 @@ model-viewer {
   transform: scale(1.2); /* Increase the size of the icon on hover */
 }
 
+
 .bubbles{
   position:fixed;
   width:100%;
@@ -485,17 +534,22 @@ model-viewer {
   overflow:hidden;
   top:0;
   left:0;
-  z-index: -1;
+  z-index: -3;
 }
 .bubble{
   position: fixed;
   bottom:-100px;
   width:40px;
   height: 40px;
-  background:#169873;
+  background: rgb(22,152,115);
+  background: linear-gradient(90deg, rgba(22,152,115,0.8981793400954132) 0%, rgba(22,152,115,1) 44%, rgba(22,152,115,0.9205883036808473) 100%);
   border-radius:50%;
   opacity:0.5;
   animation: rise 10s infinite ease-in;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
 }
 .bubble:nth-child(1){
   width:40px;
