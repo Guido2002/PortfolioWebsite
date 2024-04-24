@@ -48,6 +48,20 @@ p {
   padding-top: 0.5rem;
 }
 
+/* Style for unordered list */
+ul {
+  list-style-type: disc; /* Use filled disc as bullet points */
+  padding-left: 1.5rem; /* Add left padding for the list */
+}
+
+/* Style for list items */
+li {
+  font-size: 1.2rem;
+  color: var(--tint-70); /* Use your color variable here */
+  padding-top: 0.5rem;
+}
+
+
 :root {
   --tint-10: #1a1a1a;  /* 10% tint */
   --tint-20: #333333;  /* 20% tint */
